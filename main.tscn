@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bpr3tr7nh4wqg"]
+
+[ext_resource type="Script" uid="uid://cbgd5rvew1rcj" path="res://Scripts/MainButton.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://m5ndmb02riwr" path="res://Scripts/Score.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node" unique_id=742019429]
+
+[node name="Button" type="Button" parent="." unique_id=1695660214]
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 170.0
+offset_bottom = 91.0
+text = "THIS IS THE BUTTON"
+script = ExtResource("1_0xm2m")
+
+[node name="Label" type="Label" parent="." unique_id=2017613740]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score:"
+script = ExtResource("1_ig7tw")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
