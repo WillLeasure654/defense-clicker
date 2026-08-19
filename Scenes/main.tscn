@@ -17,7 +17,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="Shop" parent="." unique_id=1593011077 instance=ExtResource("2_kry3j")]
-layout_mode = 0
+layout_mode = 1
 
 [node name="Abilities" parent="." unique_id=849528051 instance=ExtResource("3_21xkr")]
 layout_mode = 0

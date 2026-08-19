@@ -1,29 +1,49 @@
 [gd_scene format=3 uid="uid://c01j77b3gptpq"]
 
 [node name="Shop" type="Control" unique_id=1593011077]
-visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Upgrade 1" type="Button" parent="." unique_id=1467824935]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Panel" type="Panel" parent="." unique_id=1117642525]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Upgrade 1" type="Button" parent="Panel" unique_id=1467824935]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -15.5
+offset_right = 75.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "SIG UPGRADE ONE"
 
-[node name="Upgrade 2" type="Button" parent="." unique_id=52183156]
+[node name="Upgrade 2" type="Button" parent="Panel" unique_id=52183156]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="Upgrade 3" type="Button" parent="." unique_id=508395976]
+[node name="Upgrade 3" type="Button" parent="Panel" unique_id=508395976]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="Upgrade 4" type="Button" parent="." unique_id=1121759919]
+[node name="Upgrade 4" type="Button" parent="Panel" unique_id=1121759919]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
