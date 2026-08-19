@@ -31,6 +31,7 @@ texture_normal = ExtResource("2_h2yge")
 script = ExtResource("1_0xm2m")
 
 [node name="Shop" type="Control" parent="." unique_id=1829557203]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -56,11 +57,13 @@ offset_right = 8.0
 offset_bottom = 8.0
 
 [node name="Abilities" type="Control" parent="." unique_id=1811901303]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Settings" type="Control" parent="." unique_id=1908835998]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
