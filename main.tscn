@@ -2,21 +2,52 @@
 
 [ext_resource type="Script" uid="uid://cbgd5rvew1rcj" path="res://Scripts/MainButton.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://m5ndmb02riwr" path="res://Scripts/Score.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://1y85x6cnxstp" path="res://Images/Screenshot 2026-08-18 at 3.58.25 PM.png" id="2_h2yge"]
 
-[node name="Main" type="Node" unique_id=742019429]
+[node name="Main" type="Control" unique_id=630658053]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Button" type="Button" parent="." unique_id=1695660214]
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 170.0
-offset_bottom = 91.0
-text = "THIS IS THE BUTTON"
-script = ExtResource("1_0xm2m")
-
-[node name="Label" type="Label" parent="." unique_id=2017613740]
+[node name="Game" type="Control" parent="." unique_id=2023286850]
+anchors_preset = 0
 offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Game" unique_id=2017613740]
+layout_mode = 0
+offset_right = 48.0
 offset_bottom = 23.0
 text = "Score:"
 script = ExtResource("1_ig7tw")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Button" type="TextureButton" parent="Game" unique_id=71297441]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 771.0
+offset_bottom = 722.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_h2yge")
+script = ExtResource("1_0xm2m")
+
+[node name="Shop" type="Control" parent="." unique_id=1829557203]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Upgrade 1" type="Button" parent="Shop" unique_id=1118078148]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Abilities" type="Control" parent="." unique_id=1811901303]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Settings" type="Control" parent="." unique_id=1908835998]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="Game/Button" to="Game/Button" method="_on_pressed"]

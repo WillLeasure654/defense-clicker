@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 var label 
 # Called when the node enters the scene tree for the first time.
@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	label.score += 1
+	label.score += 2
