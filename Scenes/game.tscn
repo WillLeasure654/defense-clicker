@@ -3,8 +3,64 @@
 [ext_resource type="Script" uid="uid://m5ndmb02riwr" path="res://Scripts/Score.gd" id="1_feb5d"]
 [ext_resource type="Texture2D" uid="uid://dncjn7wj3vg54" path="res://Images/Missile f1.png" id="2_fc0e3"]
 [ext_resource type="Script" uid="uid://cbgd5rvew1rcj" path="res://Scripts/MainButton.gd" id="3_7jktm"]
+[ext_resource type="Texture2D" uid="uid://c0vn13knevuws" path="res://Images/Missile f2.png" id="4_1phco"]
+[ext_resource type="Texture2D" uid="uid://dglig3d4ccay" path="res://Images/Missile f3.png" id="5_nb51f"]
+[ext_resource type="Texture2D" uid="uid://cewnuglx2k6tg" path="res://Images/Missile f4.png" id="6_nnt18"]
+[ext_resource type="Texture2D" uid="uid://b51paellk0v3a" path="res://Images/Missile f5.png" id="7_ewbju"]
+[ext_resource type="Texture2D" uid="uid://c5tq06wk0kdeb" path="res://Images/Missile f6.png" id="8_85qyi"]
+[ext_resource type="Texture2D" uid="uid://uwejpcxv4fcq" path="res://Images/Missile f7.png" id="9_iivbl"]
+[ext_resource type="Texture2D" uid="uid://buwm5ihg5k3eh" path="res://Images/Missile f8.png" id="10_7nbq1"]
+[ext_resource type="Texture2D" uid="uid://ddyaoot87e842" path="res://Images/Missile f9.png" id="11_exi56"]
+[ext_resource type="Texture2D" uid="uid://nuac2waylv7n" path="res://Images/Missile f10.png" id="12_7t8sx"]
+[ext_resource type="Texture2D" uid="uid://d2dfha4ntem8s" path="res://Images/Missile f11.png" id="13_mg4q0"]
+[ext_resource type="Texture2D" uid="uid://jb0g24vqnaa3" path="res://Images/Missile f12.png" id="14_vm72l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jsssl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fc0e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1phco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nb51f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nnt18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ewbju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_85qyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iivbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7nbq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_exi56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7t8sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mg4q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vm72l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fc0e3")
+}],
+"loop": 0,
+"name": &"Missile click",
+"speed": 36.0
+}]
 
 [node name="Game" type="Control" unique_id=1718903637]
 layout_mode = 3
@@ -39,10 +95,13 @@ offset_right = 192.0
 offset_bottom = 170.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_fc0e3")
 script = ExtResource("3_7jktm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button" unique_id=125036633]
+[node name="ClickAnimation" type="AnimatedSprite2D" parent="Button" unique_id=125036633]
 sprite_frames = SubResource("SpriteFrames_jsssl")
+animation = &"Missile click"
+frame = 12
+frame_progress = 1.0
+centered = false
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
