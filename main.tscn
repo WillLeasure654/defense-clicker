@@ -40,6 +40,21 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
+[node name="Upgrade 2" type="Button" parent="Shop" unique_id=2019552832]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Upgrade 3" type="Button" parent="Shop" unique_id=2083693062]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Upgrade 4" type="Button" parent="Shop" unique_id=388609482]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="Abilities" type="Control" parent="." unique_id=1811901303]
 anchors_preset = 0
 offset_right = 40.0
