@@ -15,35 +15,44 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_bottom = 300.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Upgrade 1" type="Button" parent="Panel" unique_id=1467824935]
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=438890063]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -75.5
-offset_top = -15.5
-offset_right = 75.5
-offset_bottom = 15.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 1, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel" unique_id=1042895153]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer" unique_id=1883060366]
+layout_mode = 2
+
+[node name="Upgrade 1" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1467824935]
+layout_mode = 2
 text = "SIG UPGRADE ONE"
 
-[node name="Upgrade 2" type="Button" parent="Panel" unique_id=52183156]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Upgrade 2" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=993942707]
+layout_mode = 2
+text = "SIG UPGRADE TWO"
 
-[node name="Upgrade 3" type="Button" parent="Panel" unique_id=508395976]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Upgrade 3" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1442899179]
+layout_mode = 2
+text = "SIG UPGRADE THREE"
 
-[node name="Upgrade 4" type="Button" parent="Panel" unique_id=1121759919]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Upgrade 4" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1589143003]
+layout_mode = 2
+text = "SIG UPGRADE FOUR"
