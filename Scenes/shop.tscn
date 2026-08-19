@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c01j77b3gptpq"]
+
+[node name="Shop" type="Control" unique_id=1593011077]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Upgrade 1" type="Button" parent="." unique_id=1467824935]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Upgrade 2" type="Button" parent="." unique_id=52183156]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Upgrade 3" type="Button" parent="." unique_id=508395976]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Upgrade 4" type="Button" parent="." unique_id=1121759919]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
