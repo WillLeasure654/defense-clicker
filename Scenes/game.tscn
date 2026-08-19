@@ -19,9 +19,6 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_fc0e3")
-}, {
-"duration": 1.0,
 "texture": ExtResource("4_1phco")
 }, {
 "duration": 1.0,
@@ -53,6 +50,27 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_vm72l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vm72l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7nbq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7t8sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7nbq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iivbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nnt18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nb51f")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_fc0e3")
@@ -100,8 +118,6 @@ script = ExtResource("3_7jktm")
 [node name="ClickAnimation" type="AnimatedSprite2D" parent="Button" unique_id=125036633]
 sprite_frames = SubResource("SpriteFrames_jsssl")
 animation = &"Missile click"
-frame = 12
-frame_progress = 1.0
 centered = false
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
