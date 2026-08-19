@@ -15,12 +15,32 @@ grow_vertical = 2
 
 [node name="Game" parent="." unique_id=1718903637 instance=ExtResource("1_jjvhh")]
 layout_mode = 1
+mouse_filter = 2
 
 [node name="Shop" parent="." unique_id=1593011077 instance=ExtResource("2_kry3j")]
 layout_mode = 1
+mouse_filter = 2
 
 [node name="Abilities" parent="." unique_id=849528051 instance=ExtResource("3_21xkr")]
-layout_mode = 0
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Settings" parent="." unique_id=1251307637 instance=ExtResource("4_6bp64")]
-layout_mode = 0
+visible = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
