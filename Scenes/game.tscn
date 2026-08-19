@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dncjn7wj3vg54" path="res://Images/Missile f1.png" id="2_fc0e3"]
 [ext_resource type="Script" uid="uid://cbgd5rvew1rcj" path="res://Scripts/MainButton.gd" id="3_7jktm"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_jsssl"]
+
 [node name="Game" type="Control" unique_id=1718903637]
 layout_mode = 3
 anchors_preset = 15
@@ -39,5 +41,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("2_fc0e3")
 script = ExtResource("3_7jktm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button" unique_id=125036633]
+sprite_frames = SubResource("SpriteFrames_jsssl")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
