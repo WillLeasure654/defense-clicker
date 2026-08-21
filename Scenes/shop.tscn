@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://c01j77b3gptpq"]
 
-[ext_resource type="Script" uid="uid://cpvghlb1u3te5" path="res://Scripts/upgrade_1.gd" id="1_a0mxf"]
+[ext_resource type="Script" uid="uid://cpvghlb1u3te5" path="res://Scripts/ShopScripts/upgrade_1.gd" id="1_a0mxf"]
+[ext_resource type="Script" uid="uid://bn3l4lddxaa7m" path="res://Scripts/ShopScripts/shopLabel.gd" id="1_s8dlv"]
 [ext_resource type="Theme" uid="uid://bn4x72c1rlu1i" path="res://shopButtonTheme.tres" id="1_ymrm4"]
-[ext_resource type="Script" uid="uid://b0f0h2fqpl1lq" path="res://Scripts/upgrade_2.gd" id="2_2shtd"]
-[ext_resource type="Script" uid="uid://dwcagy064tjgl" path="res://Scripts/upgrade_3.gd" id="3_3ps1r"]
-[ext_resource type="Script" uid="uid://bxxaekwfw3p0x" path="res://Scripts/upgrade_4.gd" id="4_ymrm4"]
-[ext_resource type="Script" uid="uid://bx5vlvm3xcuwb" path="res://Scripts/upgrade_5.gd" id="5_s8dlv"]
-[ext_resource type="Script" uid="uid://by266skrfr6yl" path="res://Scripts/upgrade_6.gd" id="6_tyrku"]
+[ext_resource type="Script" uid="uid://b0f0h2fqpl1lq" path="res://Scripts/ShopScripts/upgrade_2.gd" id="2_2shtd"]
+[ext_resource type="Script" uid="uid://dwcagy064tjgl" path="res://Scripts/ShopScripts/upgrade_3.gd" id="3_3ps1r"]
+[ext_resource type="Script" uid="uid://bxxaekwfw3p0x" path="res://Scripts/ShopScripts/upgrade_4.gd" id="4_ymrm4"]
+[ext_resource type="Script" uid="uid://bx5vlvm3xcuwb" path="res://Scripts/ShopScripts/upgrade_5.gd" id="5_s8dlv"]
+[ext_resource type="Script" uid="uid://by266skrfr6yl" path="res://Scripts/ShopScripts/upgrade_6.gd" id="6_tyrku"]
 
 [sub_resource type="Theme" id="Theme_meur3"]
 default_font_size = 40
@@ -19,23 +20,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="FoldableContainer" type="FoldableContainer" parent="." unique_id=1594734523]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -350.0
-offset_top = -300.0
-offset_bottom = 300.0
-grow_horizontal = 0
-grow_vertical = 2
+[node name="Panel" type="Panel" parent="." unique_id=1117642525]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 688.0
+offset_right = 1084.0
+offset_bottom = 1288.0
 
-[node name="Panel" type="Panel" parent="FoldableContainer" unique_id=1117642525]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="FoldableContainer/Panel" unique_id=438890063]
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=438890063]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.19607843, 0.38431373, 0.18039216, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="FoldableContainer/Panel" unique_id=1042895153]
+[node name="CenterContainer" type="CenterContainer" parent="Panel" unique_id=1042895153]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,16 +44,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/Panel/CenterContainer" unique_id=1883060366]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer" unique_id=1883060366]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=1020431918]
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer" unique_id=1020431918]
 layout_mode = 2
+mouse_filter = 0
 theme = SubResource("Theme_meur3")
 text = "Shop:"
 horizontal_alignment = 1
+script = ExtResource("1_s8dlv")
 
-[node name="Upgrade 1" type="Button" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=1467824935]
+[node name="Upgrades" type="VBoxContainer" parent="Panel/CenterContainer/VBoxContainer" unique_id=975243838]
+layout_mode = 2
+
+[node name="Upgrade 1" type="Button" parent="Panel/CenterContainer/VBoxContainer/Upgrades" unique_id=1467824935]
 layout_mode = 2
 tooltip_text = "Buy a new missile silo to launch more missiles!
 +1 Money Per Click"
@@ -70,7 +67,7 @@ text = "New Missile Silo
 Cost: 20"
 script = ExtResource("1_a0mxf")
 
-[node name="Upgrade 2" type="Button" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=993942707]
+[node name="Upgrade 2" type="Button" parent="Panel/CenterContainer/VBoxContainer/Upgrades" unique_id=993942707]
 layout_mode = 2
 tooltip_text = "Hire a new engineer to research missiles without clicking!
 +2 Passive Inome"
@@ -79,7 +76,7 @@ text = "Hire a new Engineer
 Cost: 100"
 script = ExtResource("2_2shtd")
 
-[node name="Upgrade 3" type="Button" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=1442899179]
+[node name="Upgrade 3" type="Button" parent="Panel/CenterContainer/VBoxContainer/Upgrades" unique_id=1442899179]
 layout_mode = 2
 tooltip_text = "Reaserch better homing technology for more accurate missiles!
 +5 Money Per Click"
@@ -88,7 +85,7 @@ text = "Improve Missile Homing
 Cost:"
 script = ExtResource("3_3ps1r")
 
-[node name="Upgrade 4" type="Button" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=1589143003]
+[node name="Upgrade 4" type="Button" parent="Panel/CenterContainer/VBoxContainer/Upgrades" unique_id=1589143003]
 layout_mode = 2
 tooltip_text = "Make a deal with the govnerment for extra investment!
 +15 Passive Inome"
@@ -97,7 +94,7 @@ text = "New Government Deal
 Cost: "
 script = ExtResource("4_ymrm4")
 
-[node name="Upgrade 5" type="Button" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=1174893786]
+[node name="Upgrade 5" type="Button" parent="Panel/CenterContainer/VBoxContainer/Upgrades" unique_id=1174893786]
 layout_mode = 2
 tooltip_text = "Bigger Warhead = Bigger Explosion = Bigger Profits
 +25 Money Per Click"
@@ -106,7 +103,7 @@ text = "Bigger Warhead
 Cost: "
 script = ExtResource("5_s8dlv")
 
-[node name="Upgrade 6" type="Button" parent="FoldableContainer/Panel/CenterContainer/VBoxContainer" unique_id=1546213620]
+[node name="Upgrade 6" type="Button" parent="Panel/CenterContainer/VBoxContainer/Upgrades" unique_id=1546213620]
 layout_mode = 2
 tooltip_text = "Increace world tensions so people buy more missiles! 
 +100 Passive Income"
@@ -115,9 +112,10 @@ text = "Increase Political Tensions
 Cost: 1000"
 script = ExtResource("6_tyrku")
 
-[connection signal="pressed" from="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 1" to="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 1" method="_on_pressed"]
-[connection signal="pressed" from="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 2" to="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 2" method="_on_pressed"]
-[connection signal="pressed" from="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 3" to="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 3" method="_on_pressed"]
-[connection signal="pressed" from="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 4" to="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 4" method="_on_pressed"]
-[connection signal="pressed" from="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 5" to="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 5" method="_on_pressed"]
-[connection signal="pressed" from="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 6" to="FoldableContainer/Panel/CenterContainer/VBoxContainer/Upgrade 6" method="_on_pressed"]
+[connection signal="gui_input" from="Panel/CenterContainer/VBoxContainer/Label" to="Panel/CenterContainer/VBoxContainer/Label" method="_on_gui_input"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 1" to="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 1" method="_on_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 2" to="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 2" method="_on_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 3" to="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 3" method="_on_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 4" to="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 4" method="_on_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 5" to="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 5" method="_on_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 6" to="Panel/CenterContainer/VBoxContainer/Upgrades/Upgrade 6" method="_on_pressed"]
