@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c01j77b3gptpq"]
 
 [ext_resource type="Script" uid="uid://cpvghlb1u3te5" path="res://Scripts/upgrade_1.gd" id="1_a0mxf"]
+[ext_resource type="Theme" uid="uid://bn4x72c1rlu1i" path="res://shopButtonTheme.tres" id="1_ymrm4"]
 [ext_resource type="Script" uid="uid://b0f0h2fqpl1lq" path="res://Scripts/upgrade_2.gd" id="2_2shtd"]
 [ext_resource type="Script" uid="uid://dwcagy064tjgl" path="res://Scripts/upgrade_3.gd" id="3_3ps1r"]
 [ext_resource type="Script" uid="uid://bxxaekwfw3p0x" path="res://Scripts/upgrade_4.gd" id="4_ymrm4"]
@@ -22,7 +23,7 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -300.0
+offset_left = -351.0
 offset_top = -300.0
 offset_bottom = 300.0
 grow_horizontal = 0
@@ -35,7 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 1, 1)
+color = Color(0, 0.49411765, 0.26666668, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel" unique_id=1042895153]
 layout_mode = 1
@@ -52,6 +53,7 @@ layout_mode = 2
 layout_mode = 2
 tooltip_text = "Buy a new missile silo to launch more missiles!
 +1 Money Per Click"
+theme = ExtResource("1_ymrm4")
 text = "New Missile Silo
 Cost: 20"
 script = ExtResource("1_a0mxf")
@@ -60,6 +62,7 @@ script = ExtResource("1_a0mxf")
 layout_mode = 2
 tooltip_text = "Hire a new engineer to research missiles without clicking!
 +2 Passive Inome"
+theme = ExtResource("1_ymrm4")
 text = "Hire a new Engineer
 Cost: 100"
 script = ExtResource("2_2shtd")
@@ -68,6 +71,7 @@ script = ExtResource("2_2shtd")
 layout_mode = 2
 tooltip_text = "Reaserch better homing technology for more accurate missiles!
 +5 Money Per Click"
+theme = ExtResource("1_ymrm4")
 text = "Improve Missile Homing
 Cost:"
 script = ExtResource("3_3ps1r")
@@ -76,6 +80,7 @@ script = ExtResource("3_3ps1r")
 layout_mode = 2
 tooltip_text = "Make a deal with the govnerment for extra investment!
 +15 Passive Inome"
+theme = ExtResource("1_ymrm4")
 text = "New Govenrment Deal
 Cost: "
 script = ExtResource("4_ymrm4")
@@ -84,6 +89,7 @@ script = ExtResource("4_ymrm4")
 layout_mode = 2
 tooltip_text = "Bigger Warhead = Bigger Explosion = Bigger Profits
 +25 Money Per Click"
+theme = ExtResource("1_ymrm4")
 text = "Bigger Warhead
 Cost: "
 script = ExtResource("5_s8dlv")
@@ -92,6 +98,7 @@ script = ExtResource("5_s8dlv")
 layout_mode = 2
 tooltip_text = "Increace world tensions so people buy more missiles! 
 +100 Passive Income"
+theme = ExtResource("1_ymrm4")
 text = "Increace Political Tensions
 Cost: 1000"
 script = ExtResource("6_tyrku")
