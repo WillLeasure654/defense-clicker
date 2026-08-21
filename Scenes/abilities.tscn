@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://df1o1lc0x6rxr" path="res://Themes/AbilityButton.tres" id="1_r66qs"]
 [ext_resource type="Script" uid="uid://dswdj0xeevivj" path="res://Scripts/AS/AtomicWarheads.gd" id="3_7nn0c"]
+[ext_resource type="Script" uid="uid://bn3l4lddxaa7m" path="res://Scripts/AS/AWL.gd" id="4_kuya4"]
 [ext_resource type="Script" uid="uid://cvyctka3hmvm" path="res://Scripts/AS/AbilityHeader.gd" id="6_444qv"]
 
 [sub_resource type="Theme" id="Theme_b2qx6"]
@@ -48,6 +49,7 @@ layout_mode = 0
 offset_top = 42.0
 offset_right = 300.0
 offset_bottom = 106.0
+script = ExtResource("4_kuya4")
 
 [node name="cooldown" type="Timer" parent="Ability Header/AbilityBackground/Atomic Warheads/AWL" unique_id=1619430744]
 wait_time = 10.0
