@@ -43,16 +43,42 @@ layout_mode = 2
 
 [node name="Upgrade 1" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1467824935]
 layout_mode = 2
-text = "SIG UPGRADE ONE"
+tooltip_text = "Buy a new missile silo to launch more missiles!
++1 Money Per Click"
+text = "New Missile Silo
+Cost: "
 
 [node name="Upgrade 2" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=993942707]
 layout_mode = 2
-text = "SIG UPGRADE TWO"
+tooltip_text = "Hire a new engineer to research missiles without clicking!
++1 Passive Inome"
+text = "Hire a new Engineer
+Cost:"
 
 [node name="Upgrade 3" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1442899179]
 layout_mode = 2
-text = "SIG UPGRADE THREE"
+tooltip_text = "Reaserch better homing technology for more accurate missiles!
++100 Money Per Click"
+text = "Improve Missile Homing
+Cost:"
 
 [node name="Upgrade 4" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1589143003]
 layout_mode = 2
-text = "SIG UPGRADE FOUR"
+tooltip_text = "Make a deal with the govnerment for extra investment!
++10 Passive Inome"
+text = "New Govenrment Deal
+Cost: "
+
+[node name="Upgrade 5" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1174893786]
+layout_mode = 2
+tooltip_text = "Bigger Warhead = Bigger Explosion = Bigger Profits
++10,000 Money Per Click"
+text = "Bigger Warhead
+Cost: "
+
+[node name="Upgrade 6" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1546213620]
+layout_mode = 2
+tooltip_text = "Increace world tensions so people buy more missiles! 
++200 Passive Income"
+text = "Increace Political Tensions
+Cost: "
