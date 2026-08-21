@@ -1,6 +1,9 @@
 extends TextureButton
 
+class_name MainButton
+
 var animation_playing = false
+static var multiplier = 1
 
 @onready var anim = $ClickAnimation
 
@@ -16,7 +19,7 @@ func _process(delta: float) -> void:
 func _on_pressed() -> void:
 	
 	##MONEY INCREACE
-	GameManager.money += GameManager.moneyPerClick
+	GameManager.money += GameManager.moneyPerClick * multiplier
 	
 	
 	

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dwjs22sr31vi5"]
 
 [ext_resource type="Theme" uid="uid://df1o1lc0x6rxr" path="res://Themes/AbilityButton.tres" id="1_r66qs"]
+[ext_resource type="Script" uid="uid://dswdj0xeevivj" path="res://Scripts/AS/AtomicWarheads.gd" id="3_7nn0c"]
+[ext_resource type="Script" uid="uid://bn3l4lddxaa7m" path="res://Scripts/AS/AWL.gd" id="4_kuya4"]
+[ext_resource type="Script" uid="uid://cvyctka3hmvm" path="res://Scripts/AS/AbilityHeader.gd" id="6_444qv"]
 
 [sub_resource type="Theme" id="Theme_b2qx6"]
 Button/font_sizes/font_size = 36
@@ -14,43 +17,69 @@ offset_top = -0.120025635
 offset_right = 0.040008545
 offset_bottom = 0.51989746
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1518425692]
-layout_mode = 0
-offset_right = 310.0
-offset_bottom = 1312.0
-color = Color(0.8039216, 0.10980392, 0.09411765, 1)
-
-[node name="Atomic Warheads" type="Button" parent="ColorRect" unique_id=579956257]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 343.0
-offset_right = 295.0
-offset_bottom = 383.0
-theme = ExtResource("1_r66qs")
-text = "Atomic Warheads"
-
-[node name="Funding Fraud" type="Button" parent="ColorRect" unique_id=509399133]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 666.0
-offset_right = 295.0
-offset_bottom = 706.0
-theme = ExtResource("1_r66qs")
-text = "Funding Fraud"
-
-[node name="Factory Overclock" type="Button" parent="ColorRect" unique_id=380524772]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 989.0
-offset_right = 295.0
-offset_bottom = 1029.0
-theme = ExtResource("1_r66qs")
-text = "Factory Overclock"
-
 [node name="Ability Header" type="Button" parent="." unique_id=1834864082]
 layout_mode = 0
-offset_right = 310.0
+offset_right = 360.0
 offset_bottom = 60.0
 theme = SubResource("Theme_b2qx6")
 theme_override_colors/font_color = Color(1, 0.65882355, 0.5882353, 1)
 text = "Abilities"
+script = ExtResource("6_444qv")
+
+[node name="AbilityBackground" type="ColorRect" parent="Ability Header" unique_id=1518425692]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 1312.0
+mouse_filter = 2
+color = Color(0.8039216, 0.10980392, 0.09411765, 1)
+
+[node name="Atomic Warheads" type="Button" parent="Ability Header/AbilityBackground" unique_id=579956257]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 343.0
+offset_right = 330.0
+offset_bottom = 385.0
+theme = ExtResource("1_r66qs")
+text = "Atomic Warheads"
+script = ExtResource("3_7nn0c")
+
+[node name="AWL" type="Label" parent="Ability Header/AbilityBackground/Atomic Warheads" unique_id=1057634455]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 300.0
+offset_bottom = 106.0
+text = "Cooldown: 
+Duration: "
+script = ExtResource("4_kuya4")
+
+[node name="cooldown" type="Timer" parent="Ability Header/AbilityBackground/Atomic Warheads/AWL" unique_id=1619430744]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="duration" type="Timer" parent="Ability Header/AbilityBackground/Atomic Warheads/AWL" unique_id=410497290]
+wait_time = 10.0
+one_shot = true
+
+[node name="Funding Fraud" type="Button" parent="Ability Header/AbilityBackground" unique_id=509399133]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 666.0
+offset_right = 330.0
+offset_bottom = 708.0
+theme = ExtResource("1_r66qs")
+text = "Funding Fraud"
+
+[node name="Factory Overclock" type="Button" parent="Ability Header/AbilityBackground" unique_id=380524772]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 989.0
+offset_right = 330.0
+offset_bottom = 1031.0
+theme = ExtResource("1_r66qs")
+text = "Factory Overclock"
+
+[connection signal="pressed" from="Ability Header" to="Ability Header" method="_on_pressed"]
+[connection signal="timeout" from="Ability Header/AbilityBackground/Atomic Warheads/AWL/cooldown" to="Ability Header/AbilityBackground/Atomic Warheads" method="_cooldown"]
+[connection signal="timeout" from="Ability Header/AbilityBackground/Atomic Warheads/AWL/duration" to="Ability Header/AbilityBackground/Atomic Warheads" method="_duration"]
