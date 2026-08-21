@@ -8,7 +8,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (GameManager.passiveMoneyPerSec == 0) :
-		text = "Money = $" + str(round(GameManager.money))
+		text = "Money = $" + str(round(GameManager.money)) + "\nMoney Per Click = $"+str(GameManager.moneyPerClick)
 	else :
-		text = "Money = $" + str(round(GameManager.money)) + "\nMoney Per Second = $"+str(GameManager.passiveMoneyPerSec)
+		text = "Money = $" + str(round(GameManager.money)) + "\nMoney Per Click = $"+str(GameManager.moneyPerClick)+ "\nMoney Per Second = $"+str(GameManager.passiveMoneyPerSec)
 	

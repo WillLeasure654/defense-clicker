@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://d2dfha4ntem8s" path="res://Images/Missile f11.png" id="13_mg4q0"]
 [ext_resource type="Texture2D" uid="uid://jb0g24vqnaa3" path="res://Images/Missile f12.png" id="14_vm72l"]
 
+[sub_resource type="Theme" id="Theme_ymrm4"]
+default_font_size = 40
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jsssl"]
 animations = [{
 "frames": [{
@@ -97,6 +100,7 @@ offset_left = -24.0
 offset_right = 24.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme = SubResource("Theme_ymrm4")
 text = "Score:"
 script = ExtResource("1_feb5d")
 
