@@ -1,10 +1,10 @@
 extends Button
 
-var cost = 2500
+var cost = 62500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	text = "New Government Deal\nCost: " + str(round(cost))
+	text = "Increace Political Tensions\nCost: " + str(round(cost))
 	pass # Replace with function body.
 
 
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 func _on_pressed() -> void:
 	if (GameManager.money >= cost) :
 		GameManager.money -= cost
-		GameManager.passiveMoneyPerSec += 15
+		GameManager.passiveMoneyPerSec += 100
 		cost *= 1.2
-		text = "New Government Deal\nCost: " + str(round(cost))
+		text = "Increace Political Tensions\nCost: " + str(round(cost))
 	pass # Replace with function body.
