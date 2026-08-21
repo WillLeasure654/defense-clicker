@@ -14,7 +14,13 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	GameManager.money += 1
+	
+	##MONEY INCREACE
+	GameManager.money += GameManager.moneyPerClick
+	
+	
+	
+	##ANIMATION
 	# Only play animation if one isn't already playing
 	if animation_playing:
 		anim.set_frame_and_progress(0, 0)
