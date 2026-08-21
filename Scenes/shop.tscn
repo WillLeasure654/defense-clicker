@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://bx5vlvm3xcuwb" path="res://Scripts/upgrade_5.gd" id="5_s8dlv"]
 [ext_resource type="Script" uid="uid://by266skrfr6yl" path="res://Scripts/upgrade_6.gd" id="6_tyrku"]
 
+[sub_resource type="Theme" id="Theme_meur3"]
+default_font_size = 40
+
 [node name="Shop" type="Control" unique_id=1593011077]
 layout_mode = 3
 anchors_preset = 15
@@ -48,6 +51,12 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer" unique_id=1883060366]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer" unique_id=1020431918]
+layout_mode = 2
+theme = SubResource("Theme_meur3")
+text = "Shop:"
+horizontal_alignment = 1
 
 [node name="Upgrade 1" type="Button" parent="Panel/CenterContainer/VBoxContainer" unique_id=1467824935]
 layout_mode = 2
