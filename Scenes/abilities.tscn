@@ -49,8 +49,6 @@ layout_mode = 0
 offset_top = 42.0
 offset_right = 300.0
 offset_bottom = 106.0
-text = "Cooldown: 
-Duration: "
 script = ExtResource("4_kuya4")
 
 [node name="cooldown" type="Timer" parent="Ability Header/AbilityBackground/Atomic Warheads/AWL" unique_id=1619430744]
